@@ -1,55 +1,53 @@
 *This project was designed to provide SVG support for Internet Explorer 6-8. Now that IE natively supports SVG, this project is no longer supported. It is present here for archival purposes only now. Original docs:*
 
-==Overview==
+#Overview
 
-SVG Web is a !JavaScript library which provides [http://en.wikipedia.org/wiki/Scalable_Vector_Graphics SVG] support on many browsers, including Internet Explorer, Firefox, and Safari. Using the library plus native SVG support you can instantly target ~95% of the existing installed web base.
+SVG Web is a JavaScript library which provides [SVG](http://en.wikipedia.org/wiki/Scalable_Vector_Graphics) support on many browsers, including Internet Explorer, Firefox, and Safari. Using the library plus native SVG support you can instantly target ~95% of the existing installed web base.
 
 Once dropped in you get partial support for SVG 1.1, SVG Animation (SMIL), Fonts, Video and Audio, DOM and style scripting through !JavaScript, and more in a small library. Your SVG content can be embedded directly into normal HTML 5 or through the OBJECT tag. If native SVG support is already present in the browser then that is used, though you can override this and have the SVG Web toolkit handle things instead. No downloads or plugins are necessary other than Flash 10 which is used for the actual rendering, so it's very easy to use and incorporate into an existing web site.
 
 This project is currently in Beta stage development. Many essential SVG features have been implemented but many other features have not been implemented such as filters (except blur, which is implemented) and CSS. Of the remaining features to be developed, some may never be developed, such as advanced filters, unless flash provides a reasonable way to do it.
 
-It should also be noted that while Google has contributed to this project, Google is not providing support for this project. If you find a bug please file an [http://code.google.com/p/svgweb/issues/list Issue]. Difficult problems generally take some time to get fixed but questions are usually answered quickly. If you have questions on using SVG Web please use the [http://groups.google.com/group/svg-web Google Group forum].
+It should also be noted that while Google has contributed to this project, Google is not providing support for this project.
 
-==One Minute Intro==
+#One Minute Intro
 
-<iframe width="425" height="344" frameborder="0"
- src="https://www.youtube.com/embed/XCk22AaRxiE">
-</iframe>
+Quick intro video to SVGWeb:
 
-==Demos==
+[![Quick intro video to SVGWeb](http://img.youtube.com/vi/XCk22AaRxiE/0.jpg)](http://www.youtube.com/watch?v=XCk22AaRxiE)
 
-  * [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=photos&svg.render.forceflash=false Draggable photos demo (scripted with JavaScript + SVG Image tag)]
-  * Bouncing ball demos: [http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_dynamic.html 1], [http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_dynamic_fancy.html 2]
-  * [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=videos Draggable videos demo with live video playing (scripted with JavaScript + Video tag)]
-  * [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=scimitar-anim Animated Scimitar using Audio tag and Animation (SMIL) tags]
-  * Simple animation using animation tags (SMIL): [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=anim1 1], [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=anim2 2], [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=anim3 3]
-  * [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=video1 Animating video using tags (SMIL + Video)]
-  * [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=svgopen Animated SVG Open banner with gradients, user-defined fonts (SVG Fonts), and animation (SMIL) tags]
-  * [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=droid%20font1 Defining and using custom fonts (SVG Fonts) demo]
-  * Complex static images: [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=tiger&svg.render.forceflash=false tiger], [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=spcar&svg.render.forceflash=false sporty car], [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=techcar&svg.render.forceflash=false techy car]
-  * Using viewer to render clip art: [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=android Android logo], [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=cartman Cartman], [http://codinginparadise.org/projects/svgweb/samples/demo.html?name=mono Mono logo]
-  * [http://codinginparadise.org/projects/svgweb/samples/javascript-samples/blocks_game.html Falling blocks game]; shows direct embedding SVG into normal non-XHTML HTML 5 and then scripting it with normal !JavaScript
-  * [http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_inline.html?svg.render.forceflash=false Simple 'hello world' showing how to direct embed SVG into normal, non-XHTML HTML 5]
-  * [http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_object.html?svg.render.forceflash=false Simple 'hello world' showing how to use the OBJECT tag (including for IE) to embed SVG]
-  * [http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_inline_multiple.html?svg.render.forceflash=false Simple sample showing how to direct embed multiple SVG into your page]
-  * [http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_object_multiple.html?svg.render.forceflash=false Simple sample showing how to embed multiple SVG OBJECTs into your page and then style them with CSS]
-  * [http://codinginparadise.org/projects/svgweb/tests/ SVG 1.1 test suite modified to use SVG Web instead]
+#Demos
 
-More demos can be seen with the [http://codinginparadise.org/projects/svgweb/samples/demo.html demo viewer]; keep in mind that not all of the demos in the demo viewer work.
+  * [Draggable photos demo (scripted with JavaScript + SVG Image tag](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=photos&svg.render.forceflash=false)
+  * Bouncing ball demos: [1](http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_dynamic.html), [2](http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_dynamic_fancy.html)
+  * [Draggable videos demo with live video playing (scripted with JavaScript + Video tag](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=videos)
+  * [Animated Scimitar using Audio tag and Animation (SMIL) tags](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=scimitar-anim)
+  * Simple animation using animation tags (SMIL): [1](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=anim1), [2](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=anim2), [3](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=anim3)
+  * [Animating video using tags (SMIL + Video](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=video1)
+  * [Animated SVG Open banner with gradients, user-defined fonts (SVG Fonts), and animation (SMIL) tags](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=svgopen)
+  * [Defining and using custom fonts (SVG Fonts) demo](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=droid%20font1)
+  * Complex static images: [tiger](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=tiger&svg.render.forceflash=false), [sporty car](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=spcar&svg.render.forceflash=false), [techy car](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=techcar&svg.render.forceflash=false techy car)
+  * Using viewer to render clip art: [logo](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=android Android), [Cartman](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=cartman), [Mono logo](http://codinginparadise.org/projects/svgweb/samples/demo.html?name=mono)
+  * [Falling blocks game](http://codinginparadise.org/projects/svgweb/samples/javascript-samples/blocks_game.html); shows direct embedding SVG into normal non-XHTML HTML 5 and then scripting it with normal JavaScript
+  * [Simple 'hello world' showing how to direct embed SVG into normal, non-XHTML HTML 5](http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_inline.html?svg.render.forceflash=false)
+  * [Simple 'hello world' showing how to use the OBJECT tag (including for IE) to embed SVG](http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_object.html?svg.render.forceflash=false)
+  * [Simple sample showing how to direct embed multiple SVG into your page](http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_inline_multiple.html?svg.render.forceflash=false)
+  * [Simple sample showing how to embed multiple SVG OBJECTs into your page and then style them with CSS](http://codinginparadise.org/projects/svgweb/samples/javascript-samples/svg_object_multiple.html?svg.render.forceflash=false)
+  * [SVG 1.1 test suite modified to use SVG Web instead](http://codinginparadise.org/projects/svgweb/tests/)
 
-==Getting Started==
+More demos can be seen with the [demo viewer](http://codinginparadise.org/projects/svgweb/samples/demo.html); keep in mind that not all of the demos in the demo viewer work.
 
-A [http://codinginparadise.org/projects/svgweb/docs/QuickStart.html Quick Start] guide is available to get going fast. More [http://svgweb.googlecode.com/svn/trunk/docs/UserManual.html in-depth technical documentation] is also available once you have read the [http://codinginparadise.org/projects/svgweb/docs/QuickStart.html Quick Start] guide.
+#Getting Started
 
-Also, if you are using SVG Web in your own project please add yourself to the [ProjectsUsingSVGWeb ProjectsUsingSVGWeb] page!
+A [Quick Start](http://codinginparadise.org/projects/svgweb/docs/QuickStart.html) guide is available to get going fast. More [in-depth technical documentation](http://svgweb.googlecode.com/svn/trunk/docs/UserManual.html) is also available once you have read the [Quick Start](http://codinginparadise.org/projects/svgweb/docs/QuickStart.html) guide.
 
-==Videos==
+#Videos
 
 See a Tech Talk at Google recently on SVG Web and Open Web Advocacy from Brad Neuberg, a member of the Open Web Advocacy team at Google:
 
-<wiki:video url="http://www.youtube.com/watch?v=ctuUrvReOIQ"/>
+[![Quick intro video to SVGWeb](http://img.youtube.com/vi/ctuUrvReOIQ/0.jpg)](http://www.youtube.com/watch?v=ctuUrvReOIQ)
 
-==How to Use==
+#How to Use
 
 The SVG Web toolkit uses Flash and JavaScript in order to bring static and dynamic SVG to web browsers, including Internet Explorer.
 
@@ -61,17 +59,17 @@ To see a sample SVG file, view the samples/demo.html file. To see simple example
 
 If this is a source distribution, the ActionScript source is in src/org/svgweb/
 
-==What's New==
+#What's New
 
-===February 3rd, 2011: New Release!===
+##February 3rd, 2011: New Release!
 
 A new SVG Web release is out, code named Lurker Above.
 
 The Lurker Above is a classic Dungeons and Dragons monster, attaching themselves to dungeon ceilings and dropping down to surprise unwary adventurers:
 
-[http://codinginparadise.org/images/lurkerabove.jpg]
+![Lurker above image](http://codinginparadise.org/images/lurkerabove.jpg)
 
-SVG Web is an open source drop-in !JavaScript library that provides SVG support to Internet Explorer 6, 7, and 8 by transparently using Flash.
+SVG Web is an open source drop-in JavaScript library that provides SVG support to Internet Explorer 6, 7, and 8 by transparently using Flash.
 
 Some highlights of the Lurker Above release:
 
@@ -80,41 +78,38 @@ Some highlights of the Lurker Above release:
   * More SMIL support and fixes
   * Support for SVG Web when used in iframes
   * data-path attribute is now optional and inferred when using SVG Web
-  * [http://code.google.com/p/svgweb/wiki/ReleaseNotes#svgweb-2011-02-03-Lurker-Above_(_) and more]!
 
 Special thanks to Rick Masters for sheparding this release, and to all the bug fixes and help from the SVG Web community!
 
-[http://code.google.com/p/svgweb/downloads/list Download the release now] and [http://codinginparadise.org/projects/svgweb/docs/QuickStart.html get started]!
-
-===August 30th, 2010: New Release===
+##August 30th, 2010: New Release
 
 The SVG Web team is proud to announce a new release, code named Owlephant:
 
-[http://codinginparadise.org/images/owlephant.jpg]
+![Owlephant image](http://codinginparadise.org/images/owlephant.jpg)
 
 You've heard of Elephants, you've heard of Owls… put them together and you get the fearsome Owlephant. If you encounter one, be sure it will be the last thing you ever, um, encounter. Hoot…. stomp!
 
-With this release we now score 55.45% on the [http://www.codedread.com/svg-support.php SVG compatibility charts], almost at the same level as IE 9 (58%).
+With this release we now score 55.45% on the [SVG compatibility charts](http://www.codedread.com/svg-support.php SVG compatibility charts), almost at the same level as IE 9 (58%).
 
 Major aspects of this new release includes overhauls and fixes for gradients, clipping, events, text placement, and more. It also includes a huge step forward in SMIL animation support, including being able to animate path segments and interpolate their values, scripting SMIL with JavaScript, and more.
 
-This release has been built by the community, with major contributions from Bruce Duncan from [http://visualmining.com VisualMining.com]; Ken Stacey from [http://svgmaker.com SVGMaker.com]; and the always awesome (and project co-leader) Rick Masters. Thanks to the many people like Michael Neutze, Bruce Rindahl, and more for their bug testing and evangelism!
+This release has been built by the community, with major contributions from Bruce Duncan from [VisualMining.com](http://visualmining.com); Ken Stacey from [SVGMaker.com](http://svgmaker.com); and the always awesome (and project co-leader) Rick Masters. Thanks to the many people like Michael Neutze, Bruce Rindahl, and more for their bug testing and evangelism!
 
 See the full ReleaseNotes of what is fixed in this release.
 
-[http://code.google.com/p/svgweb/downloads/list Download the release now] and [http://codinginparadise.org/projects/svgweb/docs/QuickStart.html get started]!
+[Download the release now](http://code.google.com/p/svgweb/downloads/list) and [get started](http://codinginparadise.org/projects/svgweb/docs/QuickStart.html)!
 
-Please note that there may be some breaking changes in this release that will affect code that uses older versions of SVG Web; more details [http://codinginparadise.org/projects/svgweb/docs/UserManual.html#breaking_changes here]. Also note that SVG Web does not yet support the native SVG functionality in IE 9 preview releases.
+Please note that there may be some breaking changes in this release that will affect code that uses older versions of SVG Web; more details [here](http://codinginparadise.org/projects/svgweb/docs/UserManual.html#breaking_changes). Also note that SVG Web does not yet support the native SVG functionality in IE 9 preview releases.
 
-===April 9th, 2010: New Release===
+##April 9th, 2010: New Release
 
 I'm proud to announce a new release of SVG Web. Our tradition is to go geek-tastic and name them after classic D&D monsters. This release is named Dracolisk, a crossbreed of a basilisk and a black dragon.
 
 The Dracolisk is a truly fearsome creature, able to turn an enemy into stone with merely the gaze of the basilisk coupled with the acidic breath of a black dragon. Someone get that monster a breath mint.
 
-[http://codinginparadise.org/images/dracolisk.jpg]
+![Dracolisk image](http://codinginparadise.org/images/dracolisk.jpg)
 
-<span id="dracolisk_fixes"></span>The fixes and additions in this release:
+The fixes and additions in this release:
 
    * Issue 378: Undefined variable in svg.js source code
    * Issue 435: Regression: test_js1.html and test_js2.html fail
@@ -127,7 +122,7 @@ The Dracolisk is a truly fearsome creature, able to turn an enemy into stone wit
    * Issue 447: Text placement changes with different viewboxes
    * Issue 296: appendChild of existing child should move it to the end
    * Issue 462: clipPath outside of def tag renders and blacks out the image
-   * Issue 415: Dynamic change of HREF on {{{<use>}}} to different local definition does not work (setAttributeNS())
+   * Issue 415: Dynamic change of HREF on &lt;use&gt; to different local definition does not work (setAttributeNS())
    * Issue 456: xlink:href attribute on images does not properly change with the Flash renderer
    * Issue 460: Event type is not passed through when mouse events are raised.
    * Issue 465: Stretched images have no smoothing
@@ -151,7 +146,7 @@ The Dracolisk is a truly fearsome creature, able to turn an enemy into stone wit
    * Issue 217: replaceChild + setAttribute can lead to display glitches for Flash viewer
    * Issue 181: insertBefore adds object twice which can cause strange display errors
 
-<span id="dracolisk_contributors"></span>Many thanks from the core SVG Web team (Rick Masters, Brad Neuberg, and James Hight) to the many many contributors to this release, including IBM:
+Many thanks from the core SVG Web team (Rick Masters, Brad Neuberg, and James Hight) to the many many contributors to this release, including IBM:
 
    * Le Roux Bernard
    * Li Yang
@@ -175,15 +170,15 @@ The Dracolisk is a truly fearsome creature, able to turn an enemy into stone wit
    * rxt360
    * don.barthel
 
-[http://code.google.com/p/svgweb/downloads/list Download the release now] and [http://codinginparadise.org/projects/svgweb/docs/QuickStart.html get started]!
+[Download the release now](http://code.google.com/p/svgweb/downloads/list) and [get started](http://codinginparadise.org/projects/svgweb/docs/QuickStart.html)!
 
-Please note that there are some breaking changes in this release that will affect code that uses older versions of SVG Web; more details [http://codinginparadise.org/projects/svgweb/docs/UserManual.html#breaking_changes here].
+Please note that there are some breaking changes in this release that will affect code that uses older versions of SVG Web; more details [here](http://codinginparadise.org/projects/svgweb/docs/UserManual.html#breaking_changes).
 
-===November 23rd, 2009: New Release===
+##November 23rd, 2009: New Release
 
 Just in time for Thanksgiving is another SVG Web release. Our tradition is to name SVG Web releases after monsters from D&D just to increase the geek factor, so in that spirit our release name this time is "Gelatinous Cube":
 
-[http://codinginparadise.org/images/gelcube.jpg]
+![Gelatinous Cube image](http://codinginparadise.org/images/gelcube.jpg)
 
 The Gelatinous Cube is a truly horrifying creature:
 
@@ -227,10 +222,3 @@ The full list of issues fixed:
     * Issue 337: https generates insecure warning with IE6 (FIXED for IE7 and IE8)
     * Issue 388: Cannot Add USE elements dynamically
     * Issue 361: Text label is stealing mouse click
-
-[http://code.google.com/p/svgweb/downloads/list Download the release now] and [http://codinginparadise.org/projects/svgweb/docs/QuickStart.html get started]!
-
-----
-
-See [ArchivedWhatsNew older news].
-
