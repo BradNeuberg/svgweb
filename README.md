@@ -1,4 +1,4 @@
-#This project was designed to provide SVG support for Internet Explorer 6-8. Now that IE natively supports SVG, this project is no longer supported. It is present here for archival purposes only now. The original SVN based repo is at [here](https://code.google.com/p/svgweb/downloads/list). Original docs:#
+##This project was designed to provide SVG support for Internet Explorer 6-8. Now that IE natively supports SVG, this project is no longer supported. It is present here for archival purposes only now. The original SVN based repo is at [here](https://code.google.com/p/svgweb/downloads/list). Original docs:
 
 #Overview
 
